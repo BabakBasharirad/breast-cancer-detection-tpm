@@ -7,6 +7,7 @@ This repository contains code and resources for detecting breast cancer using RN
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Data Sources](#data-sources)
+- [Code Structure](#code-structure)
 - [Usage](#usage)
   - [Preprocessing](#preprocessing)
   - [Training the Model](#training-the-model)
@@ -44,6 +45,32 @@ The RNA-Seq gene expression data is sourced from two primary datasets:
 - [Genotype-Tissue Expression (GTEx)](https://gtexportal.org/)
 
 Preprocessed data is stored in the repository, but you can download and preprocess new data using the scripts provided in the `data/` folder.
+
+## Code Structure
+
+The repository is organized as follows:
+
+```
+breast-cancer-detection-tpm/
+│
+├── data/                   # Scripts and utilities for downloading and preprocessing data
+│   └── preprocessing.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│
+├── models/                 # Contains model architectures and related utilities
+│   ├── logistic_regression.py
+│   ├── random_forest.py
+│   └── neural_network.py
+│
+├── results/                # Stores output from model evaluations (e.g., accuracy, plots)
+│   └── report.pdf
+│
+├── train.py                # Main script to train models on preprocessed data
+├── evaluate.py             # Script to evaluate trained models
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+```
+
+Each folder and file has a specific role in the workflow, from data preprocessing to training and evaluation of machine learning models.
 
 ## Usage
 
