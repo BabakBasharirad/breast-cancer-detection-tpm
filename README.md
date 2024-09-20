@@ -1,5 +1,5 @@
 
-# Breast Cancer Detection using RNA-Seq TPM Data
+# Breast Cancer Detection using RNA-Seq TPM Data [UNDER CONSTRUCTION!]
 
 This repository contains code and resources for detecting breast cancer using RNA-Seq gene expression data quantified as Transcripts Per Million (TPM). The project focuses on preprocessing, dimensionality reduction, and applying machine learning algorithms to predict cancerous tissue samples.
 
@@ -54,27 +54,72 @@ The repository is organized as follows:
 breast-cancer-detection-tpm/
 │
 ├── data_preparation/                # Scripts and utilities for downloading and preprocessing data
+│    │
 │    ├── gdc/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
 │    │  ├──  raw_gdc_data/
 │    │  │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
 │    │  └──  src/
+│    │      │
 │    │      └── preprocess_sample_files.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │    │      └── read_print_gdc_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │
 │    └── gtx/     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│       │
 │       ├──  raw_gtx_data/
 │       │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│       │
 │       └──  src/
+│    │      │
 │           └── convert_gct_to_csv.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │           └── read_print_gtx_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │           └── sampler.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │
-│
-│
+├── machine_learning                # Scripts and utilities for downloading and preprocessing data
+│    │
+│    ├── data/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  ├──  raw_gdc_data/
+│    │  │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  └──  src/
+│    │      │
+│    │      └── preprocess_sample_files.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │      └── read_print_gdc_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │
+│    ├── featurs/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  ├──  raw_gdc_data/
+│    │  │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  └──  src/
+│    │      │
+│    │      └── preprocess_sample_files.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │      └── read_print_gdc_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │
+│    ├── models/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  ├──  raw_gdc_data/
+│    │  │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  └──  src/
+│    │      │
+│    │      └── preprocess_sample_files.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │      └── read_print_gdc_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA
+│    │
+│    ├── visualization/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  ├──  raw_gdc_data/
+│    │  │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  │
+│    │  └──  src/
+│    │      │
+│    │      └── preprocess_sample_files.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │      └── read_print_gdc_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │
 ├── models/                 # Contains model architectures and related utilities
-│   ├── logistic_regression.py
-│   ├── random_forest.py
-│   └── neural_network.py
+│   └── random_forest.py
 │
 ├── results/                # Stores output from model evaluations (e.g., accuracy, plots)
 │   └── report.pdf
