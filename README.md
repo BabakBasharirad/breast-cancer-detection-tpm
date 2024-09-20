@@ -54,14 +54,14 @@ The repository is organized as follows:
 breast-cancer-detection-tpm/
 │
 ├── data_preparation/                # Scripts and utilities for downloading and preprocessing data
-│    └── gdc/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
-│    │  └──  raw_gdc_data/
+│    ├── gdc/                     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
+│    │  ├──  raw_gdc_data/
 │    │  │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │    │  └──  src/
 │    │      └── preprocess_sample_files.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │    │      └── read_print_gdc_samples.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │    └── gtx/     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
-│       └──  raw_gtx_data/
+│       ├──  raw_gtx_data/
 │       │   └── *.tsv files     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
 │       └──  src/
 │           └── convert_gct_to_csv.py     # Data cleaning, normalization, and dimensionality reduction (e.g., PCA)
