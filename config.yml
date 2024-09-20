@@ -1,0 +1,34 @@
+paths:
+  # Raw data directories
+  raw_gdc_data_files_dir: data_preparation/gdc/raw_gdc_data
+  raw_gdc_data_dir: data_preparation/gdc
+
+  raw_gtx_data_files_dir: data_preparation/gtx/raw_gtx_data
+
+  # ML data directories
+  data_dir: machine_learning/data
+  data_initial_dir: machine_learning/data/initial
+  data_interim_dir: machine_learning/data/interim
+  data_processed_dir: machine_learning/data/processed
+  
+  # ML data directory
+  model_dir: machine_learning/models
+
+  # report directory
+  report_dir: machine_learning/reports
+
+# names of files
+files:  
+  # names of raw files
+  gdc_sample_sheet_file: gdc_sample_sheet.tsv
+  gtx_raw_data_file: gtx_raw_data.gct
+  
+  gtx_data_file: gtx_data.gct
+
+  # names of dataset files after preprocessing (ready to ML)
+  dataset_file: dataset.csv
+  features_file: features.csv
+  lables_file: labels.csv
+
+  benign_dataset_file: 'benign.csv'
+  cancer_dataset_file: 'cancer.csv'
