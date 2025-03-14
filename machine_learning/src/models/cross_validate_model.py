@@ -12,6 +12,7 @@ from datetime import datetime
 
 # Third-party Imports
 import pandas as pd
+import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -39,7 +40,7 @@ def cross_validate_model(features_file, labels_file, model_file_prefix, report_f
     formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
 
     report_f = open(report_file, 'w')
-    dual_print(report_file, 'This report is generated on ', formatted_now, '\n')
+    #  dual_print(report_file, 'This report is generated on ', formatted_now, '\n')
     report_f.close()
 
     # Load reduced features and labels
@@ -78,7 +79,7 @@ def cross_validate_model(features_file, labels_file, model_file_prefix, report_f
         with open(model_file, 'wb') as f:
             pickle.dump(model, f)
 
-        dual_print(report_file, f"Trained model saved to {model_file}")
+        #  dual_print(report_file, f"Trained model saved to {model_file}")
 
         # Make predictions
         y_pred = model.predict(X_test)
@@ -115,6 +116,11 @@ def cross_validate_model(features_file, labels_file, model_file_prefix, report_f
     dual_print(report_file, f"Precision: {sum(precision_scores) / len(precision_scores):.4f}")
     dual_print(report_file, f"Recall: {sum(recall_scores) / len(recall_scores):.4f}")
     dual_print(report_file, f"F1 Score: {sum(f1_scores) / len(f1_scores):.4f}")
+    dual_print(report_file, f"F1 Score: {sum(f1_scores) / len(f1_scores):.4f}")
+
+    # Compute standard error (SE) for accuracy
+    se_accuracy = np.std(accuracy_scores, ddof=1) / np.sqrt(len(accuracy_scores))
+    print(f"Standard Error of Accuracy: {se_accuracy:.4f}")
 
     plt.subplots_adjust(top = 0.99, bottom=0.01, hspace=1.5, wspace=0.4)
     plt.tight_layout(pad=2)
